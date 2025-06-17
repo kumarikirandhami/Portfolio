@@ -1,5 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from './context/ThemeContext';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Navbar from './component/Navbar';
 import Hero from './component/Hero';
@@ -38,9 +39,11 @@ const AppContent: React.FC = () => {
 
 function App() {
   return (
-    <ThemeProvider>
-      <AppContent />
-    </ThemeProvider>
+    <BrowserRouter basename="/Portfolio">
+      <ThemeProvider>
+        <AppContent />
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 
