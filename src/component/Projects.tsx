@@ -63,7 +63,7 @@ const Projects: React.FC = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <div className="flex space-x-4">
+                  {/* <div className="flex space-x-4">
                     <a
                       href={project.github}
                       target="_blank"
@@ -80,7 +80,7 @@ const Projects: React.FC = () => {
                     >
                       Live Demo
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="p-6">

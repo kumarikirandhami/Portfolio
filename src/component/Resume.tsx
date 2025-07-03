@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const GOOGLE_DRIVE_FILE_ID = "1ljkBUKWlEAy7mcIE5dEjSRAtrox1S3b3"; // Actual file ID from user
+const RESUME_DOWNLOAD_LINK = `https://drive.google.com/uc?export=download&id=${GOOGLE_DRIVE_FILE_ID}`;
+
 const Resume: React.FC = () => {
   const handleDownload = () => {
     // Replace with your actual resume file path
@@ -22,12 +25,17 @@ const Resume: React.FC = () => {
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
               Download my detailed resume to learn more about my experience and qualifications.
             </p>
-            <button
-              onClick={handleDownload}
+            <a
+              href={RESUME_DOWNLOAD_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              download
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105"
+              onMouseOver={e => (e.currentTarget.style.background = '#3730a3')}
+              onMouseOut={e => (e.currentTarget.style.background = '#4f46e5')}
             >
               Download Resume
-            </button>
+            </a>
           </motion.div>
           
           <motion.div
